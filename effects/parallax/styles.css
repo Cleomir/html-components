@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+}
+body,
+html {
+  height: 100%;
+}
+
+.parallax {
+  background: url("https://www.w3schools.com/howto/img_parallax.jpg")
+    center/cover no-repeat fixed;
+  height: 100%;
+}
+
+.content {
+  height: 800px;
+  background-color: red;
+  font-size: 2.2rem;
+  color: #fff;
+  text-align: center;
+}
