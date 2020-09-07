@@ -1,24 +1,24 @@
-window.onload = () => {
-  const tabLinks = [...document.getElementsByClassName("tab-links")];
-  tabLinks.forEach((element) => {
-    element.addEventListener("click", (event) => {
-      openTab(event, element.innerHTML);
-    });
-  });
-};
+const tabLinks = [...document.getElementsByClassName("tab-links")];
 
 const openTab = (event, tabName) => {
+  // hide all tabs and remove active class
   const tabContent = [...document.getElementsByClassName("tab-content")];
   tabContent.forEach((element) => {
     element.style.display = "none";
   });
-
-  const tabLinks = [...document.getElementsByClassName("tab-links")];
-
   tabLinks.forEach((element) => {
-    element.className = element.className.replace(" active", "");
+    element.className = element.classList.remove("active");
   });
 
+  // show clicked tab
   document.getElementById(tabName).style.display = "block";
-  event.currentTarget.className += " active";
+  event.currentTarget.classList.add("active");
 };
+
+tabLinks.forEach((element) => {
+  element.addEventListener("click", (event) => {
+    openTab(event, element.innerHTML);
+  });
+});
+// show initial tab
+tabLinks[0].click();
