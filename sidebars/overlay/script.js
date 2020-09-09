@@ -1,7 +1,7 @@
 const sideNav = document.querySelector("#side-nav");
 const main = document.querySelector("#main");
 
-document.querySelector("span").addEventListener("click", () => {
+document.querySelector("button").addEventListener("click", () => {
   sideNav.style.width = "250px";
   main.style.marginLeft = "250px";
 });
