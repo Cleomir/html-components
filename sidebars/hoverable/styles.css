@@ -1,0 +1,34 @@
+.side-nav a {
+  position: absolute;
+  left: -80px;
+  padding: 15px;
+  width: 100px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  transition: 0.3s;
+}
+.side-nav a:hover {
+  left: 0;
+}
+
+#about {
+  top: 20px;
+  background-color: #4caf50;
+}
+
+#blog {
+  top: 80px;
+  background-color: #2196f3;
+}
+
+#projects {
+  top: 140px;
+  background-color: #f44336;
+}
+
+#contact {
+  top: 200px;
+  background-color: #555;
+}
